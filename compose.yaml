@@ -4,8 +4,8 @@ services:
     container_name: go-chatgpt-api
     image: linweiyuan/go-chatgpt-api
     ports:
-      - 8080:8080
+      - 888:8080
     environment:
       - TZ=Asia/Shanghai
-      - GO_CHATGPT_API_PROXY=
+      - CHATGPT_BASE_URL=http://go-chatgpt-api:8080/chatgpt/
     restart: unless-stopped
